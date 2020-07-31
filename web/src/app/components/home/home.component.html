@@ -1,0 +1,80 @@
+
+<h5>本地静态文件的引用方式</h5>
+<img src="assets/images/01.jpg" alt="" height="40px">
+
+<hr/>
+<h5>加载网络静态资源的方式</h5>
+<img [src]="picUrl" alt="">
+
+<hr>
+<h5>循环数据 显示数据的索引（key）</h5>
+<ul>
+    <li *ngFor="let item of list;let key=index;">
+        <span *ngIf="key==1" class="red">{{key}} -- {{item.title}}</span>
+        <span *ngIf="key!=1">{{key}} -- {{item.title}}</span>
+    </li>
+</ul>
+
+<hr>
+
+<h5>条件判断语句 *ngIf</h5>
+<!--为true时-->
+<div *ngIf="flag">
+    <img src="assets/images/01.jpg" alt="" height="40px">
+</div>
+<!--为false时-->
+<div *ngIf="!flag">
+    <img [src]="picUrl" alt="">
+</div>
+
+<hr>
+<h5>条件判断语句 *ngswitch</h5>
+<div [ngSwitch]="orderStatus">
+    <div *ngSwitchCase="1">已经支付</div>
+    <div *ngSwitchCase="2">支付并且确认订单</div>
+    <div *ngSwitchCase="3">已经发货</div>
+    <div *ngSwitchCase="4">已经收货</div>
+    <div *ngSwitchDefault>无效订单</div>
+</div>
+
+<hr>
+<!-- <h5>属性[ngStyle]="{style: expression}" ,[ngClass]="{cssClass: expression}",使用这些来动态控制样式，（尽量不用使用dom来改变class）</h5> -->
+<h5>ngClass使用方式</h5>
+<div [ngClass]="{'red': true,'green':false}">
+    <strong>demo1</strong>
+</div>
+
+<div [ngClass]="{'green': flag,'yellow':!flag}">
+    <strong>demo2</strong>
+</div>
+
+<hr>
+<h5>循环数组，让数组的第一个元素的字体为red</h5>
+<ul>
+    <li *ngFor="let item of list;let key=index" [ngClass]="{'red': key==0,'green':key==1}">
+      {{key}} -- {{item.title}}
+    </li>
+</ul>
+
+<hr>
+<p [ngStyle]="{'color': 'blue'}">ngStyle的使用方式</p>
+<hr>
+<h5>管道1-时间转换</h5>
+<p>{{today | date:'yyyy-MM-dd HH:mm:ss'}}</p>
+
+<hr>
+<h5>事件绑定</h5>
+<button (click)="run()">执行事件</button>
+<br>
+<button (click)="getDate()">执行方法，获取数据</button>
+<br>
+<button (click)="runEvent($event)">执行方法，获取事件对象</button>
+<hr>
+
+<h5>表单事件，事件对象</h5>
+<p>keydown</p>
+<input type="text" (keydown)="keyDown($event)">
+<hr>
+<h5>双向数据绑定---MVVM 只针对表单</h5>
+<input type="text" [(ngModel)]="keywords">
+{{keywords}}
