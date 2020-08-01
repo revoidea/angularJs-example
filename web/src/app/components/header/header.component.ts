@@ -9,7 +9,15 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
+
+
   ngOnInit(): void {
+  }
+
+
+
+  run(){
+    console.log('这是一个头部组件在运行')
   }
 
 }
