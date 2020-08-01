@@ -1,0 +1,30 @@
+ <h4 class="text-center">人员登记系统</h4>
+  
+ <div class="people-list">
+    <p>姓名：<input type="text" [(ngModel)]="peopleInfo.username"></p>
+    <p>性别：
+        <input type="radio" name="sex" id="sex1" value="1" [(ngModel)]="peopleInfo.sex"><label for="sex1">男</label>
+        <input type="radio" name="sex" id="sex2" value="2" [(ngModel)]="peopleInfo.sex"><label for="sex2">女</label>
+    </p>
+    <p>
+        城市：
+        <select name="city" id="city" [(ngModel)]="peopleInfo.city">
+            <option [value]="item.name" *ngFor="let item of citis">{{item.name}}</option>
+        </select>
+    </p>
+    <p>
+        爱好：
+        <span *ngFor="let item of peopleInfo.hobby;let key=index">
+            <input type="checkbox"  [id]="'check'+key" [(ngModel)]="item.checked"><label [for]="'check'+key">{{item.title}}</label>
+            &nbsp; &nbsp;
+        </span>
+    </p>
+    <p>
+        备注：
+        <textarea name="" id="" cols="30" rows="10" [(ngModel)]="peopleInfo.mark"></textarea>
+    </p>
+    <button (click)="doSubmit()">提交</button>
+ </div>
+
+
+

@@ -11,11 +11,12 @@ import { AppComponent } from './app.component';
 import { NewsComponent } from './components/news/news.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { FormComponent } from './components/form/form.component';
 
 /**@NgModule 装饰器：@NgModule 接受一个【元数据对象】，告诉Angular 如何编译和启动程序  */
 @NgModule({
   declarations: [  /**配置当前项目运行的组件 */
-    AppComponent, NewsComponent, HomeComponent, HeaderComponent
+    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FormComponent
   ],
   imports: [ /**配置当前模块运行依赖的其他模块 */
     BrowserModule,
