@@ -8,7 +8,9 @@ import { TitleCasePipe } from '@angular/common';
 })
 export class HomeComponent implements OnInit {
 
-  public title:any='这是一个标题'
+  
+
+  public title:any='这是一个首页标题'
 
 
   //图片路径

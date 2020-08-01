@@ -37,4 +37,8 @@ export class NewsComponent implements OnInit {
   }
 
 
+
+  run(){
+    alert('我是父组件的run方法')
+  }
 }

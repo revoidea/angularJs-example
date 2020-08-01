@@ -20,7 +20,8 @@ import { TodolistComponent } from './components/todolist/todolist.component';
 //引入并且配置服务
 import { StorageService } from  './services/storage.service';
 import { MenusComponent } from './components/menus/menus.component';
-import { TransitionComponent } from './components/transition/transition.component'
+import { TransitionComponent } from './components/transition/transition.component';
+import { FooterComponent } from './components/footer/footer.component'
 
 
 
@@ -29,7 +30,7 @@ import { TransitionComponent } from './components/transition/transition.componen
 /**@NgModule 装饰器：@NgModule 接受一个【元数据对象】，告诉Angular 如何编译和启动程序  */
 @NgModule({
   declarations: [  /**配置当前项目运行的组件 */
-    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FormComponent, SearchComponent, TodolistComponent, MenusComponent, TransitionComponent
+    AppComponent, NewsComponent, HomeComponent, HeaderComponent, FormComponent, SearchComponent, TodolistComponent, MenusComponent, TransitionComponent, FooterComponent
   ],
   imports: [ /**配置当前模块运行依赖的其他模块 */
     BrowserModule,

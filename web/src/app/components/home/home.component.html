@@ -1,4 +1,11 @@
 
+
+<!--父组件传递参数，或者方法，两者的声明方式是一样的-->
+<app-header [title]='title'></app-header>
+
+<hr>
+<p>{{title}}</p>
+<div>
 <h5>本地静态文件的引用方式</h5>
 <img src="assets/images/01.jpg" alt="" height="40px">
 
@@ -78,3 +85,5 @@
 <h5>双向数据绑定---MVVM 只针对表单</h5>
 <input type="text" [(ngModel)]="keywords">
 {{keywords}}
+
+</div>
