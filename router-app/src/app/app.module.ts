@@ -14,6 +14,12 @@ import { SettingComponent } from './components/home/setting/setting.component';
 import { PcateComponent } from './components/proclamation/pcate/pcate.component';
 import { PlistComponent } from './components/proclamation/plist/plist.component';
 
+
+//上百个组件，会导致页面加载比较慢，所以要引入自定义模块
+
+//引入自定义模块
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +36,7 @@ import { PlistComponent } from './components/proclamation/plist/plist.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

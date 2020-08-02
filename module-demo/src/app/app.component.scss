@@ -1,0 +1,14 @@
+header {
+    height: 30px;
+    padding: 10px;
+    background-color: black;
+    a{
+        color: white;
+        margin: 0 30px;
+        text-decoration: none;
+    }
+
+    .active {
+        color:  blue;
+    }
+}
