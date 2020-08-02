@@ -1,0 +1,18 @@
+<h4>新闻列表</h4>
+
+<!---路由传值的第一种方式：get传值-->
+<!-- <ul>
+    <li *ngFor="let item of list;let key=index">
+        <a  [routerLink]="['/newscontent']" [queryParams]="{aid:key}" >{{item}}</a>
+    </li>
+</ul> -->
+
+
+<!--路由传值的第二种方式：动态路由-->
+<ul>
+    <li *ngFor="let item of list;let key=index">
+        <a  [routerLink]="['/newscontent/' , key]" >{{item}}</a>
+    </li>
+</ul>
+
+

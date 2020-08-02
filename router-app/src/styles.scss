@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex{
+    display: flex;
+
+    .left{
+        width: 20%;
+        height: 85vh;
+        border: 1px solid red;
+    }
+
+    .right {
+        width: 75%;
+        height: 85vh;
+        border: 1px solid blue;
+    }
+}
+
+.active{
+    color: red;
+}
